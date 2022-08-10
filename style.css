@@ -1,16 +1,26 @@
-header {
-    
-    width: 1440px;
-    background: url(/assets/mountains.svg);
- 
-
+.head {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: auto;
+  background: url(/assets/mountains.svg);
+}
+.logo {
+  grid-area: 1;
+  background: url(/assets/logo.svg);
 }
 
+.menu {
+  grid-area: 2;
+}
 
 .menu_desctop {
-    display: grid;
-    
-  column-gap: 15px;
-  margin-top: 5px;
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.button_call_me {
+  grid-area: 3;
+  background: url(/assets/buttoncallme.svg);
 }
