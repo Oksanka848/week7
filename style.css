@@ -1,0 +1,16 @@
+header {
+    
+    width: 1440px;
+    background: url(/assets/mountains.svg);
+ 
+
+}
+
+
+.menu_desctop {
+    display: grid;
+    
+  column-gap: 15px;
+  margin-top: 5px;
+  
+}
