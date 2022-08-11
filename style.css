@@ -1,76 +1,95 @@
-
 .hed {
-  
-  background: url(/assets/mountains.svg);
-}
-.mount {
-  display: grid;
   width: 100%;
-  height: 30%;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 1fr;
-  
-  
-  width: 1348px;
-  align-self: center;
+  height: 1332px;
+  background: url(/assets/mountains.svg) no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 2% 10% 30% 1fr;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
 }
 .logo {
-  grid-area: 1/1;
+  grid-area: 2/1;
   background: url(/assets/logo.svg);
   width: 121px;
   height: 63.56px;
-grid-row: auto;
+  align-self: center;
+  margin-left: 10%;
 }
 .nav {
   grid-column: 2;
-  grid-row: 1;
-  justify-content: center;
+  grid-row: 2;
+
+  place-items: flex;
+  margin-top: 3%;
 }
-.menu {
-  grid-area: 2/1;
+.nav > .menu {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "men1 men2 men3 men4 men5 men6";
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
-  place-items: center;
-padding: 0px;
-gap: 40px;
+  column-gap: 0.5%;
+
+  list-style: none;
+
+  font-family: "Forum";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 0.5em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+@media screen and (min-width: 60%) {
+  .menu {
+    display: none;
+  }
+}
+.men1 {
+  grid-area: men1;
 }
 
-.menu {
- 
-  font-family: 'Forum';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 18px;
-/* identical to box height */
-
-letter-spacing: 0.04em;
-text-transform: uppercase;
-
-color: #000000;
-
+.men2 {
+  grid-area: men2;
 }
+.men3 {
+  grid-area: men3;
+}
+.men4 {
+  grid-area: men4;
+}
+.men5 {
+  grid-area: men5;
+}
+.men6 {
+  grid-area: men6;
+}
+
 .button_call_me {
-  grid-area: 1/3;
+  grid-area: 2/3;
   width: 156px;
   height: 55.76px;
   background: url(/assets/buttoncallme.svg);
   place-self: center;
 }
 .pic1 {
-  grid-area: 3/1;
-  background: url(/assets/pin_1.svg);
+  grid-area: 4/1;
+  background: url(/assets/pin_1.svg) no-repeat;
 }
 
-
 .pic2 {
-
-  grid-area: 3/2;
-  background: url(/assets/pin_2.svg);
+  grid-area: 4/2;
+  background: url(/assets/pin_2.svg) no-repeat;
 }
 
 .pic3 {
-  grid-area: 3/3;
-  background: url(/assets/pin_3.svg);
+  grid-area: 4/3;
+
+  background-image: url(/assets/pin_3.svg) no-repeat;
 }
