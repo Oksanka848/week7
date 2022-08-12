@@ -5,16 +5,42 @@
   padding: 10px;
 }
 
+.conteiner {
+  display: grid;
+  width: 100vw;
+  height: auto;
+  grid-template-areas:
+    "heder"
+    "man"
+    "foote";
+  background: url(/assets/gradient.svg) no-repeat;
+  object-fit: cover;
+  grid-template-rows: 35% 30% 35%;
+}
+
+.heder {
+  grid-area: heder;
+}
+
+.man {
+  grid-area: man;
+}
+.foote {
+  grid-area: foote;
+}
+
 .hed {
   display: grid;
   width: 100%;
-  height: 40vh;
+  height: 800px;
   grid-template-areas:
     "logo nav button_call_me"
     "pic1 pic2 pic3";
   grid-template-columns: (repeat(3, 1fr));
-  grid-template-rows: (repeat(8, 1fr));
+  grid-template-rows: 20% 30% 50%;
   gap: 12px;
+  background: url(/assets/mountains.svg) no-repeat;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 500px) {
@@ -42,9 +68,12 @@
   display: grid;
 
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr;
-  align-items: stretch;
+  grid-template-rows: 50% 1fr;
+  place-self: center;
+
   text-align: center;
+  text-decoration: underline;
+  font-size: max(0.8em, min(0.2em));
 }
 
 .button_call_me {
@@ -63,7 +92,7 @@
 
 .pic1 {
   grid-column: 1 / 2;
-  grid-row: 2 / 8;
+  grid-row: 3 / 3;
   justify-self: flex-end;
   background: url(/assets/pin_1.svg) no-repeat;
   width: 156px;
@@ -71,21 +100,23 @@
 
   object-fit: contain;
   height: auto;
+  min-width: 100%;
 }
 .pic2 {
   grid-column: 2 / 3;
-  grid-row: 3 / 9;
-  justify-self: center;
+  grid-row: 3 / 3;
+  justify-self: flex-end;
   background: url(/assets/pin_2.svg) no-repeat;
   width: 156px;
   height: 55.76px;
-  max-width: 10%;
-  object-fit: cover;
+  align-self: auto;
+  object-fit: contain;
   height: auto;
+  min-width: 100%;
 }
 .pic3 {
-  grid-column: 3 / 4;
-  grid-row: 2 / 8;
+  grid-column: 3 / 3;
+  grid-row: 3 / 3;
   justify-self: self-start;
   background: url(/assets/pin_3.svg) no-repeat;
 
@@ -142,4 +173,86 @@
 }
 .cl {
   grid-column: 6;
+}
+
+/*main*/
+.man {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(226, 211, 206, 0) 0%,
+    rgba(225, 211, 206, 0.72) 40.54%,
+    #e2d3ce 100%
+  );
+  transform: rotate(180deg) url(/assets/gradient.svg) no-repeat;
+}
+.lux_packages {
+  display: grid;
+  width: 45vw;
+  height: 100vh;
+  grid-template-areas:
+    "luxtrips luxtrips"
+    "offering offering"
+    "pin_4 provide"
+    "pin_4 group_521";
+  justify-self: center;
+
+  background: url(/assets/gradient.svg) no-repeat;
+}
+
+.luxtrips {
+  grid-area: luxtrips;
+  font-family: "Forum";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: optional;
+  /* Style */
+  color: #0c0b10;
+}
+
+.offering {
+  grid-area: offering;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 179.8%;
+  justify-self: center;
+  /* or 29px */
+  text-align: center;
+  font-size: optional;
+  color: #000000;
+}
+
+.group_521 {
+  grid-area: group_521;
+  background: url(/assets/group521.svg) no-repeat;
+}
+
+.pin_4 {
+  grid-area: pin_4;
+  background: url(/assets/pin_4.svg) no-repeat;
+  width: 156px;
+  height: 55.76px;
+  align-self: auto;
+  object-fit: contain;
+  height: auto;
+  min-width: 100%;
+}
+
+.provide {
+  grid-area: provide;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 179.8%;
+  font-size: optional;
+
+  color: #000000;
 }
