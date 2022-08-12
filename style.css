@@ -190,7 +190,7 @@
 }
 .lux_packages {
   display: grid;
-  width: 45vw;
+  width: 50vw;
   height: 100vh;
   grid-template-areas:
     "luxtrips luxtrips"
@@ -200,6 +200,7 @@
   justify-self: center;
 
   background: url(/assets/gradient.svg) no-repeat;
+  column-gap: 5%;
 }
 
 .luxtrips {
@@ -207,12 +208,13 @@
   font-family: "Forum";
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 25px;
+  font-size: 30px;
+  line-height: 30px;
   text-align: center;
   font-size: optional;
   /* Style */
   color: #0c0b10;
+  height: 25%;
 }
 
 .offering {
@@ -223,7 +225,7 @@
   font-size: 16px;
   line-height: 179.8%;
   justify-self: center;
-  /* or 29px */
+  height: 25%;
   text-align: center;
   font-size: optional;
   color: #000000;
@@ -232,6 +234,8 @@
 .group_521 {
   grid-area: group_521;
   background: url(/assets/group521.svg) no-repeat;
+  align-self: center;
+  width: max-content;
 }
 
 .pin_4 {
@@ -241,8 +245,6 @@
   height: 55.76px;
   align-self: auto;
   object-fit: contain;
-  height: auto;
-  min-width: 100%;
 }
 
 .provide {
