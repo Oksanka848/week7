@@ -295,9 +295,9 @@
   grid-template-rows: 35% 25% 25% 15%;
 }
 .sub {
+  grid-area: sub;
   grid-row: 1;
-  align-self: stretch;
-  background: url(/assets/img1.svg) no-repeat;
+  align-self: center;
+  background-image: url(/assets/img1.svg) no-repeat;
   width: 275.84px;
-  object-fit: contain;
 }
