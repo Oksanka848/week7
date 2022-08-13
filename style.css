@@ -8,12 +8,13 @@
 .conteiner {
   display: grid;
   width: 100vw;
-  height: auto;
+  height: 100%;
   grid-template-areas:
     "heder"
     "man"
     "foote";
-  background: url(/assets/gradient.svg) no-repeat;
+  background: url(/assets/mountains.svg) no-repeat;
+  background-size: contain;
   object-fit: cover;
   grid-template-rows: 35% 30% 35%;
 }
@@ -32,15 +33,15 @@
 .hed {
   display: grid;
   width: 100%;
-  height: 800px;
+  height: 47em;
   grid-template-areas:
     "logo nav button_call_me"
-    "pic1 pic2 pic3";
+    " . . ."
+    "pic1 . pic3"
+    " . pic2 .";
   grid-template-columns: (repeat(3, 1fr));
-  grid-template-rows: 20% 30% 50%;
+  grid-template-rows: 10% 1fr 28% 1fr;
   gap: 12px;
-  background: url(/assets/mountains.svg) no-repeat;
-  object-fit: cover;
 }
 
 @media screen and (max-width: 500px) {
@@ -91,40 +92,41 @@
 }
 
 .pic1 {
-  grid-column: 1 / 2;
-  grid-row: 3 / 3;
-  justify-self: flex-end;
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+  justify-self: flex-start;
   background: url(/assets/pin_1.svg) no-repeat;
   width: 156px;
-  height: 55.76px;
-
+  margin-left: -5em;
+  margin-top: -1em;
   object-fit: contain;
-  height: auto;
+
   min-width: 100%;
 }
 .pic2 {
+  grid-area: pic2;
   grid-column: 2 / 3;
-  grid-row: 3 / 3;
-  justify-self: flex-end;
+  grid-row: 2 / 5;
+  justify-self: flex-start;
   background: url(/assets/pin_2.svg) no-repeat;
   width: 156px;
-  height: 55.76px;
-  align-self: auto;
-  object-fit: contain;
+
+  margin-left: 15em;
+  margin-top: 20em;
   height: auto;
   min-width: 100%;
 }
 .pic3 {
-  grid-column: 3 / 3;
-  grid-row: 3 / 3;
-  justify-self: self-start;
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+  justify-self: flex-start;
   background: url(/assets/pin_3.svg) no-repeat;
-
   width: 156px;
-  height: 55.76px;
-
+  margin-top: 0.5em;
+  margin-left: 38em;
   object-fit: contain;
-  height: auto;
+
+  min-width: 100%;
 }
 
 @media screen and (max-width: 700px) {
@@ -179,7 +181,7 @@
 .man {
   display: grid;
   width: 100vw;
-  height: 100vh;
+  height: 810px;
   background: linear-gradient(
     180deg,
     rgba(226, 211, 206, 0) 0%,
@@ -190,31 +192,35 @@
 }
 .lux_packages {
   display: grid;
-  width: 50vw;
-  height: 100vh;
+  width: 40vw;
+  height: 100%;
   grid-template-areas:
     "luxtrips luxtrips"
     "offering offering"
     "pin_4 provide"
     "pin_4 group_521";
   justify-self: center;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 15% 10% 35% 25%;
 
   background: url(/assets/gradient.svg) no-repeat;
-  column-gap: 5%;
+  column-gap: 10%;
+  row-gap: 2%;
 }
 
 .luxtrips {
   grid-area: luxtrips;
+
   font-family: "Forum";
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 2em;
+  line-height: 2rem;
   text-align: center;
   font-size: optional;
-  /* Style */
+  padding-left: 15%;
+  padding-right: 15%;
   color: #0c0b10;
-  height: 25%;
 }
 
 .offering {
@@ -222,10 +228,11 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 179.8%;
+  font-size: 0.7em;
+  line-height: 1.5rem;
   justify-self: center;
-  height: 25%;
+  padding-left: 15%;
+  padding-right: 15%;
   text-align: center;
   font-size: optional;
   color: #000000;
@@ -233,18 +240,24 @@
 
 .group_521 {
   grid-area: group_521;
+  grid-column: 2;
+  grid-row: 4;
   background: url(/assets/group521.svg) no-repeat;
-  align-self: center;
-  width: max-content;
+  width: 240px;
+  object-fit: contain;
+  margin-left: -1.2em;
+  min-width: 90%;
 }
 
 .pin_4 {
-  grid-area: pin_4;
+  grid-column: 1;
+  grid-row: 3 / 5;
   background: url(/assets/pin_4.svg) no-repeat;
-  width: 156px;
-  height: 55.76px;
-  align-self: auto;
+  width: 275.84px;
   object-fit: contain;
+  margin-left: -5em;
+  margin-top: -1.8em;
+  min-width: 100%;
 }
 
 .provide {
@@ -252,9 +265,39 @@
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 0.7em;
   line-height: 179.8%;
   font-size: optional;
 
   color: #000000;
+}
+/*footer*/
+
+.foote {
+  grid-area: foote;
+  width: 100%;
+  height: 40em;
+  object-fit: cover;
+  background: url(/assets/bg_footerfootback.svg) no-repeat;
+  background-size: cover;
+}
+.foot {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "sub"
+    "logo2"
+    "call"
+    "t";
+  align-items: center;
+
+  grid-template-rows: 35% 25% 25% 15%;
+}
+.sub {
+  grid-row: 1;
+  align-self: stretch;
+  background: url(/assets/img1.svg) no-repeat;
+  width: 275.84px;
+  object-fit: contain;
 }
