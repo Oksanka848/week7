@@ -48,10 +48,10 @@
   background: no-repeat;
 
   place-self: center;
-  object-fit: cover;
+  object-fit: contain;
 }
 .heder > .hed > .logo > img {
-  max-width: 20%;
+  max-width: 100%;
 }
 
 .nav {
@@ -94,9 +94,10 @@
 
 .heder > .hed > .button_call_me > img {
   max-width: 100%;
+  object-fit: contain;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .pic2 {
     display: none;
   }
@@ -109,7 +110,7 @@
   .pic3,
   .pin_4,
   .group_521,
-  .button_call_me2,
+  .logo2,
   .provide,
   .luxtrips {
     display: none;
@@ -369,9 +370,18 @@
 .call > .con {
   grid-area: 1 / 5;
 }
-@media screen and (max-width: 470px) {
-  .call {
+@media screen and (max-width: 400px) {
+  .lux,
+  .book,
+  .con,
+  .why {
     display: none;
+  }
+  .foote > .foot > .call > .button_call_me2 > a > img {
+    max-width: 100%;
+  }
+  .heder > .hed > .logo > img {
+    max-width: 100%;
   }
   .allres,
   .pp {
@@ -381,9 +391,6 @@
   .offering {
     font-size: 50%;
     line-height: 30%;
-  }
-  .heder > .hed > .logo > img {
-    max-width: 5%;
   }
 }
 
