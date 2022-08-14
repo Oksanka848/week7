@@ -2,12 +2,12 @@
   border: 1px solid rebeccapurple;
   color: green;
   text-align: center;
-  padding: 10px;
+  padding: 1%;
 }
 
 .conteiner {
   display: grid;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   grid-template-areas:
     "heder"
@@ -32,61 +32,87 @@
 
 .hed {
   display: grid;
-  width: 100vh;
-  height: 47em;
+  width: 100%;
+  height: 100%;
   grid-template-areas:
     "logo nav button_call_me"
     " . . ."
     "pic1 . pic3"
     " . pic2 .";
-  grid-template-columns: (repeat(3, 1fr));
-  grid-template-rows: 10% 1fr 28% 1fr;
-  gap: 12px;
-}
-
-@media screen and (max-width: 500px) {
-  .hed {
-    display: grid;
-    grid-template-areas:
-      "logo"
-      "pic2";
-    grid-template-columns: 1fr minmax(150px, 1fr) 1fr;
-    grid-template-rows: repeat(2, 1fr);
-  }
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 10% 23% 45% 5%;
+  gap: 1%;
 }
 
 .logo {
   grid-area: logo;
-  background: url(/assets/logo.svg) no-repeat;
-  width: 146px;
-  height: 55.76px;
+  background: no-repeat;
+
   place-self: center;
   object-fit: cover;
+}
+.heder > .hed > .logo > img {
+  max-width: 20%;
 }
 
 .nav {
   grid-area: nav;
+}
+.nav {
   display: grid;
+  grid-template-columns: 15% 20% 15% 20% 12% 15%;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
 
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 50% 1fr;
-  place-self: center;
+.nav > .home {
+  grid-area: 1 / 1;
+}
+.nav > .lux {
+  grid-area: 1 / 2;
+}
+.nav > .book {
+  grid-area: 1 / 3;
+}
+.nav > .why {
+  grid-area: 1 / 4;
+}
 
-  text-align: center;
-  text-decoration: underline;
-  font-size: max(0.8em, min(0.2em));
+.nav > .con {
+  grid-area: 1 / 5;
+}
+
+.nav > .cl {
+  grid-area: 1 / 6;
 }
 
 .button_call_me {
   grid-area: button_call_me;
-  width: 156px;
-  height: 55.76px;
-  background: url(/assets/buttoncallme.svg) no-repeat;
+  background: no-repeat;
   place-self: center;
   object-fit: cover;
 }
-@media screen and (max-width: 700px) {
-  .button_call_me {
+
+.heder > .hed > .button_call_me > img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .pic2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .button_call_me,
+  .nav,
+  .pic1,
+  .pic2,
+  .pic3,
+  .pin_4,
+  .group_521,
+  .button_call_me2,
+  .provide,
+  .luxtrips {
     display: none;
   }
 }
@@ -95,53 +121,42 @@
   grid-column: 2 / 3;
   grid-row: 3 / 5;
   justify-self: flex-start;
-  background: url(/assets/pin_1.svg) no-repeat;
-  width: 156px;
-  margin-left: -5em;
+  background: no-repeat;
+
+  margin-left: -4em;
   margin-top: -1em;
   object-fit: contain;
-
-  min-width: 100%;
 }
+
+.heder > .hed > .pic1 > img {
+  max-width: 100%;
+}
+.heder > .hed > .pic2 > img {
+  max-width: 100%;
+}
+.heder > .hed > .pic3 > img {
+  max-width: 100%;
+}
+
 .pic2 {
   grid-area: pic2;
   grid-column: 2 / 3;
   grid-row: 2 / 5;
   justify-self: flex-start;
-  background: url(/assets/pin_2.svg) no-repeat;
-  width: 156px;
-
+  background: no-repeat;
+  object-fit: contain;
   margin-left: 15em;
   margin-top: 20em;
-  height: auto;
-  min-width: 100%;
 }
 .pic3 {
   grid-column: 2 / 3;
   grid-row: 3 / 5;
-  justify-self: flex-start;
-  background: url(/assets/pin_3.svg) no-repeat;
-  width: 156px;
+  justify-self: flex-end;
+  background: no-repeat;
+
   margin-top: 0.5em;
-  margin-left: 38em;
+
   object-fit: contain;
-
-  min-width: 100%;
-}
-
-@media screen and (max-width: 700px) {
-  .nav,
-  .pic1,
-  .pic3 {
-    display: none;
-  }
-  .pic2 {
-    width: 100%;
-    max-width: 100%;
-
-    background-size: cover;
-    height: auto;
-  }
 }
 
 .home {
@@ -180,19 +195,18 @@
 /*main*/
 .man {
   display: grid;
-  width: 100vw;
-  height: 810px;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     180deg,
     rgba(226, 211, 206, 0) 0%,
     rgba(225, 211, 206, 0.72) 40.54%,
     #e2d3ce 100%
   );
-  transform: rotate(180deg) url(/assets/gradient.svg) no-repeat;
 }
 .lux_packages {
   display: grid;
-  width: 40vw;
+  width: 40%;
   height: 100%;
   grid-template-areas:
     "luxtrips luxtrips"
@@ -201,30 +215,40 @@
     "pin_4 group_521";
   justify-self: center;
   grid-template-columns: 45% 45%;
-  grid-template-rows: 15% 10% 35% 25%;
+  grid-template-rows: 15% 15% 50% 5%;
 
   background: url(/assets/gradient.svg) no-repeat;
-  column-gap: 10%;
+  column-gap: 5%;
   row-gap: 2%;
 }
 
 .luxtrips {
   grid-area: luxtrips;
+  place-self: center;
 
+  max-width: 80%;
+  min-height: 90%;
+}
+
+.man > .lux_packages > .luxtrips > p {
   font-family: "Forum";
   font-style: normal;
   font-weight: 400;
-  font-size: 2em;
-  line-height: 2rem;
+  font-size: 1.8em;
+  line-height: 1.8rem;
   text-align: center;
-  font-size: optional;
-  padding-left: 15%;
-  padding-right: 15%;
+
   color: #0c0b10;
 }
-
 .offering {
   grid-area: offering;
+  place-self: center;
+
+  max-width: 80%;
+  max-height: 100%;
+}
+
+.man > .lux_packages > .offering > p {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
@@ -237,31 +261,33 @@
   font-size: optional;
   color: #000000;
 }
-
 .group_521 {
   grid-area: group_521;
   grid-column: 2;
-  grid-row: 4;
-  background: url(/assets/group521.svg) no-repeat;
-  width: 240px;
+  grid-row: 3;
+  background: no-repeat;
+  align-self: flex-end;
   object-fit: contain;
-  margin-left: -1.2em;
-  min-width: 90%;
+}
+.man > .lux_packages > .group_521 > img {
+  max-width: 70%;
 }
 
 .pin_4 {
   grid-column: 1;
-  grid-row: 3 / 5;
-  background: url(/assets/pin_4.svg) no-repeat;
-  width: 275.84px;
+  grid-row: 3 / 4;
+  background: no-repeat;
   object-fit: contain;
-  margin-left: -5em;
-  margin-top: -1.8em;
-  min-width: 100%;
+}
+
+.man > .lux_packages > .pin_4 > img {
+  max-width: 100%;
 }
 
 .provide {
   grid-area: provide;
+}
+.man > .lux_packages > .provide > p {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
@@ -271,6 +297,7 @@
 
   color: #000000;
 }
+
 /*footer*/
 
 .foote {
@@ -284,46 +311,113 @@
 .foot {
   display: grid;
   width: 100%;
-  height: 47em;
-  grid-template-areas:
-    ". sub ."
-    ". logo2 ."
-    ". call ."
-    "t . t ";
-  row-gap: 10%;
+  height: 100%;
+
+  row-gap: 2.5%;
   grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 35% 10% 15% 15%;
+  grid-template-rows: 50% 17% auto 5%;
 }
 .sub {
-  grid-area: sub;
   grid-row: 1;
   grid-column: 2;
   place-self: center;
-  background-image: url(/assets/img1.svg) no-repeat;
-  width: 100%;
-  height: 100%;
+
   object-fit: cover;
 }
+.foote > .foot > .sub > img {
+  max-width: 85%;
+}
 .logo2 {
-  grid-area: logo2;
   grid-row: 2;
   grid-column: 2;
-  background: url(/assets/group418logo2.svg) no-repeat;
-  width: 100%;
-  height: 120%;
+  background: no-repeat;
+
   place-self: center;
-  justify-self: flex-start;
+
   object-fit: contain;
+}
+.foote > .foot > .logo2 > img {
+  max-width: 50%;
 }
 
 .call {
-  grid-area: call;
   grid-row: 3;
   grid-column: 2;
-  align-self: stretch;
+  align-content: center;
 }
-.t {
-  grid-area: t;
+.call {
+  display: grid;
+  grid-template-columns: 20% 15% 30% 20% 15%;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+.call > .lux {
+  grid-area: 1 / 1;
+}
+.call > .book {
+  grid-area: 1 / 2;
+}
+
+.call > .button_call_me2 {
+  grid-area: 1 / 3;
+}
+.foote > .foot > .call > img {
+  max-width: 50%;
+}
+.call > .why {
+  grid-area: 1 / 4;
+}
+.call > .con {
+  grid-area: 1 / 5;
+}
+@media screen and (max-width: 470px) {
+  .call {
+    display: none;
+  }
+  .allres,
+  .pp {
+    font-size: 20%;
+    line-height: 10%;
+  }
+  .offering {
+    font-size: 50%;
+    line-height: 30%;
+  }
+  .heder > .hed > .logo > img {
+    max-width: 5%;
+  }
+}
+
+.allres {
   grid-row: 4;
-  grid-column: 2;
+  grid-column: 1;
+  align-self: center;
+}
+
+.pp {
+  grid-row: 4;
+  grid-column: 3;
+  align-self: center;
+}
+.allres > p,
+.pp > p {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50%;
+  line-height: 80%;
+
+  color: #ffffff;
+}
+.lux > a > p,
+.book > a > p,
+.why > a > p,
+.con > a > p {
+  font-family: "Forum";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80%;
+  line-height: 100%;
+
+  color: #0c0b10;
 }
