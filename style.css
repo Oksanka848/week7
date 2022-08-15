@@ -3,7 +3,9 @@
   text-align: center;
   padding: 1%;
 }
-
+.conteiner > a {
+  text-decoration: underline;
+}
 .conteiner {
   display: grid;
   width: 100%;
@@ -12,14 +14,20 @@
     "heder"
     "man"
     "foote";
-  background: url(/assets/mountains.svg) no-repeat;
-  background-size: contain;
-  object-fit: cover;
+    background: url(/assets/mountains.svg) no-repeat;  
+    background-size: contain;
   grid-template-rows: 35% 30% 35%;
 }
 
 .heder {
   grid-area: heder;
+  background:rgba(225, 211, 206, 0.72) (
+    180deg,
+    rgba(226, 211, 206, 0) 0%,
+    rgba(225, 211, 206, 0.72) 40.54%,
+    #e2d3ce 100%);
+  
+  
 }
 
 .man {
@@ -40,7 +48,8 @@
     " . pic2 .";
   grid-template-columns: 20% 60% 20%;
   grid-template-rows: 10% 23% 45% 5%;
-  gap: 1%;
+ 
+  
 }
 
 .logo {
@@ -63,7 +72,9 @@
   grid-template-rows: 1fr;
   place-items: center;
 }
-
+.conteiner > .heder > .hed > .button_call_me > a {
+  text-decoration: underline;
+}
 .nav > .home {
   grid-area: 1 / 1;
 }
