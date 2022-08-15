@@ -36,7 +36,7 @@ text-decoration: none !important;
   width: 100%;
   height: 100%;
   grid-template-areas:
-    "logo nav button_call_me"
+    "logo menu button_call_me"
     " . . ."
     "pic1 . pic3"
     " . pic2 .";
@@ -57,36 +57,37 @@ text-decoration: none !important;
   max-width: 100%;
 }
 
-.nav {
-  grid-area: nav;
+.menu {
+  grid-area: menu;
+ 
 }
-.nav {
+.menu > ul {
   display: grid;
-  grid-template-columns: 15% 20% 15% 20% 12% 15%;
+  
   grid-template-rows: 1fr;
-  place-items: center;
+  
+  list-style-type: none;
+
 }
-.conteiner > .heder > .hed > .home > a {
-  text-decoration: underline;
-}
-.nav > .home {
+
+.menu > .home {
   grid-area: 1 / 1;
 }
-.nav > .lux {
+.menu > .lux {
   grid-area: 1 / 2;
 }
-.nav > .book {
+.menu > .book {
   grid-area: 1 / 3;
 }
-.nav > .why {
+.menu > .why {
   grid-area: 1 / 4;
 }
 
-.nav > .con {
+.menu > .con {
   grid-area: 1 / 5;
 }
 
-.nav > .cl {
+.menu > .cl {
   grid-area: 1 / 6;
 }
 
@@ -109,7 +110,7 @@ text-decoration: none !important;
 }
 @media screen and (max-width: 800px) {
   .button_call_me,
-  .nav,
+  .menu,
   .pic1,
   .pic2,
   .pic3,
@@ -259,10 +260,7 @@ text-decoration: none !important;
   font-weight: 400;
   font-size: 0.7em;
   line-height: 1.5rem;
-  justify-self: center;
-  padding-left: 15%;
-  padding-right: 15%;
-  text-align: center;
+
   color: #000000;
 }
 .group_521 {
