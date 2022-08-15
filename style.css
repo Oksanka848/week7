@@ -88,20 +88,8 @@ a {
   object-fit: cover;
 }
 
-.heder > .hed > .button_call_me > img {
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.pic1 {
-  grid-column: 2 / 3;
-  grid-row: 3 / 5;
-  justify-self: flex-start;
-  background: no-repeat;
-
-  margin-left: -4em;
-  margin-top: -1em;
-  object-fit: contain;
+.conteiner > .heder > .hed > .button_call_me > img {
+  max-width: 70%;
 }
 
 /*main*/
@@ -263,7 +251,7 @@ main > .group_foto > .pic3 > img {
   align-self: flex-end;
   object-fit: contain;
 }
-.group_521 > img {
+.man > .lux_packages > .group_521 > img {
   max-width: 70%;
 }
 
@@ -274,7 +262,7 @@ main > .group_foto > .pic3 > img {
 }
 
 .man > .lux_packages > .pin_4 > img {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .provide {
@@ -413,12 +401,13 @@ main > .group_foto > .pic3 > img {
   color: #0c0b10;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1000px) {
-  .pic2 {
+@media screen and (max-width: 1000px) {
+  .pic2,
+  .menu {
     display: none;
   }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 500px) {
   .button_call_me,
   .menu,
   .pic1,
