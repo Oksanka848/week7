@@ -3,8 +3,8 @@
   text-align: center;
   padding: 1%;
 }
-.conteiner > a {
-  text-decoration: underline;
+ a {
+text-decoration: none !important;
 }
 .conteiner {
   display: grid;
@@ -21,12 +21,6 @@
 
 .heder {
   grid-area: heder;
-  background:rgba(225, 211, 206, 0.72) (
-    180deg,
-    rgba(226, 211, 206, 0) 0%,
-    rgba(225, 211, 206, 0.72) 40.54%,
-    #e2d3ce 100%);
-  
   
 }
 
@@ -72,7 +66,7 @@
   grid-template-rows: 1fr;
   place-items: center;
 }
-.conteiner > .heder > .hed > .button_call_me > a {
+.conteiner > .heder > .hed > .home > a {
   text-decoration: underline;
 }
 .nav > .home {
